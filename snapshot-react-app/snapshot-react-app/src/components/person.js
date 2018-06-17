@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-// import HOF
+import Person from '../controller/personRoutes';
+import ListPersons from './listPersons';
+
 export default class PersonForm extends React.Component {
   constructor(props) {
     super(props);
@@ -27,8 +29,8 @@ export default class PersonForm extends React.Component {
 
   handleSubmit(event) {
     console.log('Save to database');
-    // HOF.create('persons')
-    // call HOF with state to perform CRUD
+    // creat after submission 
+    Person('create');
     event.preventDefault();
   }
 
